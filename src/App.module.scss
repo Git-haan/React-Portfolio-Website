@@ -7,3 +7,10 @@
   border: 2px dashed #888888;
   border-radius: 30px;
 }
+
+@media screen and (min-width: 720px) {
+  .App {
+    padding: 0rem 4%;
+  }
+  
+}
