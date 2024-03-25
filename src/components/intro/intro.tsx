@@ -30,7 +30,7 @@ export const Intro = ({ className }: IntroProps) => {
                     transition={{ delay: 0.4 }}
                     className={styles.h3}
                 >
-                    A Computer Science Fanatic{' '}
+                    Scholar by day, Programmer by night{' '}
                 </motion.h3>
                 <motion.svg
                     height="4"
@@ -63,8 +63,7 @@ export const Intro = ({ className }: IntroProps) => {
                     </defs>
                 </motion.svg>
             </div>
-            <p className={styles['sub-subtitle']}>Discipled Scholar by day, Programmer by night</p>
-            <button>Pop Quiz 😦</button>
+
             <Animation />
             <Portfolio />
         </div>

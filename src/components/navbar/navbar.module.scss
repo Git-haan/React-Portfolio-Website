@@ -4,12 +4,20 @@
 .logo {
   font-size: 1em;
   color: black;
+  font-weight: 700;
+  &:hover {
+    color: #a9e95d;
+  }
 }
 .links {
   list-style-type: none;
   display: flex;
   gap: 3em;
-  color: #dc3284;
+  padding: 10px;
+  color: #000000;
+  &:hover {
+    color: #a9e95d;
+  }
 }
 .nav {
   display: flex;
@@ -28,4 +36,10 @@
     flex-direction: column;
     gap: 1rem;
   }
+}
+.link-special {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0px;
 }

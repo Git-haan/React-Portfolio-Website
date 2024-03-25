@@ -23,8 +23,16 @@ export const Navbar = ({ className }: NavbarProps) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to={'/contact'} className={styles.links}>
-                        Contact
+                    <Link to={'/'} className={styles.links}>
+                        Quiz
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to={'/contact'}
+                        className={classNames(styles.links, styles['link-special'])}
+                    >
+                        Get In Touch{' '}
                     </Link>
                 </li>
             </ul>
