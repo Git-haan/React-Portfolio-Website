@@ -5,4 +5,7 @@ export default createBoard({
     name: 'Contact',
     Board: () => <Contact />,
     isSnippet: true,
+    environmentProps: {
+        canvasWidth: 332.66666666666663,
+    },
 });

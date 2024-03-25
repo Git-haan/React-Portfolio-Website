@@ -62,4 +62,16 @@
   font-weight: 700;
 }
 .socials {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+.socials img {
+  height: 2.5rem;
+}
+.social-svg {
+  height: 2rem;
+  fill: #dc3232;
 }

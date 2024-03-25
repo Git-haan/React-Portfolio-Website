@@ -16,8 +16,22 @@ export const Intro = ({ className }: IntroProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <div>
-                <h2 className={styles.title}>Ishaan Reddy</h2>
-                <h3 className={styles.subtitle}>Computer Science Student</h3>
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className={styles.title}
+                >
+                    Ishaan Reddy
+                </motion.h2>
+                <motion.h3
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className={styles.h3}
+                >
+                    A Computer Science Fanatic{' '}
+                </motion.h3>
                 <motion.svg
                     height="4"
                     viewBox="0 0 204 4"
@@ -49,7 +63,7 @@ export const Intro = ({ className }: IntroProps) => {
                     </defs>
                 </motion.svg>
             </div>
-            <p className={styles['sub-subtitle']}>Discipled Scholar by day, Leet Coder by night</p>
+            <p className={styles['sub-subtitle']}>Discipled Scholar by day, Programmer by night</p>
             <button>Pop Quiz 😦</button>
             <Animation />
             <Portfolio />
