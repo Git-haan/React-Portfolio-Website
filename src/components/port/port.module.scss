@@ -78,22 +78,9 @@
     fill: #a9e95d;
   }
 }
-.table-txt {
-  text-align: start;
-  color: #ffffff;
-  font-weight: 200;
-  margin-left: 0px;
-  padding: 2rem 3rem 0rem;
-}
-.table {
-  background-color: #000000;
-  margin-top: 25px;
-  border: 0px solid black;
-  border-radius: 20px;
-}
-.table-link {
-  margin-bottom: 0px;
-  padding-bottom: 3rem;
-  text-align: start;
-  padding-left: 3rem;
+.skills {
+  display: flex;
+  flex-direction: row;
+  row-gap: 0%;
+  column-gap: 10%;
 }

@@ -1,0 +1,30 @@
+{
+    "questions": [
+        {
+            "question": "What is my first name?",
+            "choices": ["Namish", "Ishaan", "Aneesh", "Liam"],
+            "correctAnswerIdx": 1
+        },
+        {
+            "question": "What is my last name?",
+            "choices": ["Palli", "Smith", "Craig", "Reddy"],
+            "correctAnswerIdx": 3
+        },
+        {
+            "question": "What is my favorite number?",
+            "choices": ["1", "3", "5", "7"],
+            "correctAnswerIdx": 3
+        },
+        {
+            "question": "What is this program written in mostly?",
+            "choices": ["C#", "Typescript", "C+", "Python"],
+            "correctAnswerIdx": 1
+        },
+        {
+            "question": "When did I create my first repository on Github?",
+            "choices": ["July", "March", "January", "November"],
+            "correctAnswerIdx": 1
+        }
+    ]
+
+}

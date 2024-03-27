@@ -18,12 +18,12 @@ export const Navbar = ({ className }: NavbarProps) => {
             </Link>
             <ul className={styles.links}>
                 <li>
-                    <Link to={'/'} className={styles.links}>
+                    <Link to={'/Port'} className={styles.links}>
                         Portfolio
                     </Link>
                 </li>
                 <li>
-                    <Link to={'/'} className={styles.links}>
+                    <Link to={'/Quiz'} className={styles.links}>
                         Quiz
                     </Link>
                 </li>

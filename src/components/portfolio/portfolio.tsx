@@ -1,8 +1,7 @@
 import classNames from 'classnames';
 import styles from './portfolio.module.scss';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import website1 from '../../assets/website-1.jpg';
-import website2 from '../../assets/website-2.jpg';
 import website3 from '../../assets/website-3.jpg';
 
 export interface PortfolioProps {
@@ -43,11 +42,12 @@ export const Portfolio = ({ className }: PortfolioProps) => {
                             y2="2"
                             gradientUnits="userSpaceOnUse"
                         >
-                            <stop stop-color="#DC3284" />
-                            <stop offset="1" stop-color="#DC3232" />
+                            <stop stop-color="#fff" />
+                            <stop offset="1" stop-color="#fff" />
                         </linearGradient>
                     </defs>
                 </motion.svg>
+
                 <p className={styles.p}>
                     I am a CS student with a passion for creating beautiful and functional projects.
                     I have a strong understanding of <span className={styles.span}>Python</span>{' '}
@@ -57,35 +57,92 @@ export const Portfolio = ({ className }: PortfolioProps) => {
                     for new ways to grow my knowledge.
                 </p>
             </div>
+
             <p className={styles.p}></p>
             <div className={styles['grid-items']}>
                 <motion.div className={styles['grid-item']}>
                     <img src={website1} className={styles['grid-img']} />
-                    <div className={styles['visit-portfolio']}>
-                        <h4>Python Chat Room App</h4>
-                        <a
-                            href="https://github.com/Git-haan/React-Trivia-Game"
-                            className={styles.anchor}
-                        >
-                            Learn More{' '}
-                        </a>
-                    </div>
                 </motion.div>
 
                 <motion.div className={styles['grid-item']}>
                     <img src={website3} className={styles['grid-img']} />
-                    <div className={styles['visit-portfolio']}>
-                        <h4>React Trivia App</h4>
-                        <a
-                            href="https://github.com/Git-haan/Tkinter-Chat-App"
-                            className={styles.anchor}
-                        >
-                            Learn More{' '}
-                        </a>
-                    </div>
                 </motion.div>
             </div>
-            <div />
+            <div>
+                <table className={styles.table}>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td className={styles['table-txt']}>
+                            A Trivia Game application, deployed utilizing React and Codux software.
+                            This application has been integrated with TypeScript, as well as SCSS
+                            and CSS, in order to allow for the dynamic rendering of questions and
+                            buttons.
+                        </td>
+                        <td>
+                            <motion.svg
+                                width="3"
+                                height="150"
+                                viewBox="0 0 6 150"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                className={styles.line}
+                            >
+                                <motion.path
+                                    d="M2 2L2 548"
+                                    stroke="url(#paint0_linear_6_519)"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                    initial={{ pathLength: 0 }}
+                                    animate={{ pathLength: 1 }}
+                                    transition={{ delay: 1 }}
+                                    className={styles['path-line']}
+                                />
+                                <defs>
+                                    <linearGradient
+                                        id="paint0_linear_6_519"
+                                        x1="0"
+                                        y1="0"
+                                        x2="0"
+                                        y2="550"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#ffffff" />
+                                        <stop offset="1" stop-color="#ffffff" />
+                                    </linearGradient>
+                                </defs>
+                            </motion.svg>
+                        </td>
+                        <td className={styles['table-txt']}>
+                            A chat application applied on local servers with the use of Python's
+                            tkinter, threading, and socket modules. The software enables numerous
+                            clients to link, allowing seamless communication without any latency.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className={styles['table-link']}>
+                            <a
+                                href="https://github.com/Git-haan/React-Trivia-Game"
+                                className={styles.anchor}
+                            >
+                                Learn More{' '}
+                            </a>
+                        </td>
+                        <td></td>
+                        <td className={styles['table-link']}>
+                            <a
+                                href="https://github.com/Git-haan/Tkinter-Chat-App"
+                                className={styles.anchor}
+                            >
+                                Learn More{' '}
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div className={styles.socials}>
                 <a href="https://www.linkedin.com/in/ishaan-r-05-/">
                     <svg

@@ -46,6 +46,7 @@ export const Intro = ({ className }: IntroProps) => {
                         stroke-linecap="round"
                         initial={{ pathLength: 0 }}
                         animate={{ pathLength: 1 }}
+                        transition={{ delay: 1 }}
                         className={styles['path-line']}
                     />
                     <defs>
@@ -57,8 +58,8 @@ export const Intro = ({ className }: IntroProps) => {
                             y2="2"
                             gradientUnits="userSpaceOnUse"
                         >
-                            <stop stop-color="#DC3284" />
-                            <stop offset="1" stop-color="#DC3232" />
+                            <stop stop-color="#a9e95d" />
+                            <stop offset="1" stop-color="#a9e95d" />
                         </linearGradient>
                     </defs>
                 </motion.svg>
