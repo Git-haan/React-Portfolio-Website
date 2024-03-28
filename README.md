@@ -25,3 +25,19 @@ Open [http://127.0.0.1:5173/](http://127.0.0.1:5173/) to view it in the browser.
 ### `npm run preview`
 
 Boots up a local static web server that serves the files from dist at [`http://localhost:4173`](http://localhost:4173) . It's an easy way to check if the production build looks OK in your local environment.
+
+## Implementation
+
+### Home
+![home-window](Screenshots/home-window.png)
+
+### Portfolio
+![portfolio-window](Screenshots/portfolio-window.png)
+
+![portfolio-window](Screenshots/portfolio-window-2.png)
+
+### Quiz
+![quiz-window](Screenshots/quiz-window.png)
+
+### Contatc
+![contact-form](Screenshots/contact-form.png)
