@@ -3,6 +3,8 @@ import styles from './port.module.scss';
 import { motion } from 'framer-motion';
 import website1 from '../../assets/website-1.jpg';
 import website3 from '../../assets/website-3.jpg';
+import Lottie from 'lottie-react';
+import rocket from '../../assets/rocket-animation.json';
 
 export interface PortProps {
     className?: string;
@@ -15,117 +17,136 @@ export interface PortProps {
 export const Port = ({ className }: PortProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <div className={styles['portfolio-wrapper']}>
+            <div className={styles['port-wrapper']}>
+                <div className={styles.paragraph}>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className={classNames(styles.title, styles['what-ive-been-up-to'])}
+                    >
+                        What I've Been Up To
+                    </motion.h2>
+                    <p className={styles.p1}>
+                        As a Computer Science student, I constantly grow and learn from my mistakes. I have
+                        a firm grasp of <span className={styles.span}>Python</span> and{' '}
+                        <span className={styles.span}>Typescript</span>, with some experience in{' '}
+                        <span className={styles.span}>JavaScript</span> and front-end framework development.
+                        I am always eager to learn more, working on and uploading various coding projects on my GitHub.
+                    </p>
+                </div>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.6, duration: 0.5 }}
+                    className={styles.animation}
+                >
+                    <Lottie animationData={rocket} className={styles.animation} />
+                </motion.div>
+            </div>
+
+            <div className={styles['recent-wrapper']}>
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     className={styles.title}
                 >
-                    What I Am Great At
+                    Most Recent Projects
                 </motion.h2>
-            </div>
-            <p className={styles.p}></p>
-            <div className={styles.skills}>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={styles['social-svg']}
-                    viewBox="0 0 128 128"
-                >
-                    <path d="M 54.918785,9.1927421e-4 C 50.335132,0.02221727 45.957846,0.41313697 42.106285,1.0946693 30.760069,3.0991731 28.700036,7.2947714 28.700035,15.032169 v 10.21875 h 26.8125 v 3.40625 h -26.8125 -10.0625 c -7.792459,0 -14.6157588,4.683717 -16.7499998,13.59375 -2.46181998,10.212966 -2.57101508,16.586023 0,27.25 1.9059283,7.937852 6.4575432,13.593748 14.2499998,13.59375 h 9.21875 v -12.25 c 0,-8.849902 7.657144,-16.656248 16.75,-16.65625 h 26.78125 c 7.454951,0 13.406253,-6.138164 13.40625,-13.625 v -25.53125 c 0,-7.2663386 -6.12998,-12.7247771 -13.40625,-13.9374997 C 64.281548,0.32794397 59.502438,-0.02037903 54.918785,9.1927421e-4 Z m -14.5,8.21875012579 c 2.769547,0 5.03125,2.2986456 5.03125,5.1249996 -2e-6,2.816336 -2.261703,5.09375 -5.03125,5.09375 -2.779476,-1e-6 -5.03125,-2.277415 -5.03125,-5.09375 -10e-7,-2.826353 2.251774,-5.1249996 5.03125,-5.1249996 z" />
-                    <path d="m 85.637535,28.657169 v 11.90625 c 0,9.230755 -7.825895,16.999999 -16.75,17 h -26.78125 c -7.335833,0 -13.406249,6.278483 -13.40625,13.625 v 25.531247 c 0,7.266344 6.318588,11.540324 13.40625,13.625004 8.487331,2.49561 16.626237,2.94663 26.78125,0 6.750155,-1.95439 13.406253,-5.88761 13.40625,-13.625004 V 86.500919 h -26.78125 v -3.40625 h 26.78125 13.406254 c 7.792461,0 10.696251,-5.435408 13.406241,-13.59375 2.79933,-8.398886 2.68022,-16.475776 0,-27.25 -1.92578,-7.757441 -5.60387,-13.59375 -13.406241,-13.59375 z m -15.0625,64.65625 c 2.779478,3e-6 5.03125,2.277417 5.03125,5.093747 -2e-6,2.826354 -2.251775,5.125004 -5.03125,5.125004 -2.76955,0 -5.03125,-2.29865 -5.03125,-5.125004 2e-6,-2.81633 2.261697,-5.093747 5.03125,-5.093747 z" />
-                </svg>
-                <h5 className={styles['skill-title']}>2023 - Present</h5>
-                <h4 className={styles['skill-title']}>Python Mastery</h4>
-                <p className={styles['skill-text']}>
-                    I have been working on the fundementals of Python for a year, creating a variety
-                    of projects ranging from algorithms to UI development.
+                <p className={styles.p}>
+                    Two of my most recent projects explore fundamentals in{' '}
+                    <span className={styles.span}>Python</span> and
+                    <span className={styles.span}> Typescript </span> with a touch of back-end
+                    development.
                 </p>
-            </div>
-            <div className={styles.skills}>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={styles['social-svg']}
-                    viewBox="0 0 128 128"
-                >
-                    <path d="M5.562 2H74.437C76.405 2 78 3.595 78 5.562V74.437C78 76.405 76.405 78 74.438 78H5.562C3.595 78 2 76.405 2 74.438V5.562C2 3.595 3.595 2 5.562 2Z"/>
-                    <path d="M46.093 61.059V69.387C47.442 70.081 49.038 70.601 50.88 70.948C52.722 71.295 54.664 71.469 56.705 71.469C58.694 71.469 60.584 71.278 62.374 70.897C64.165 70.515 65.734 69.886 67.084 69.01C68.433 68.134 69.501 66.989 70.288 65.575C71.075 64.161 71.468 62.413 71.468 60.331C71.468 58.822 71.243 57.499 70.794 56.362C70.344 55.226 69.696 54.215 68.848 53.33C68.001 52.445 66.984 51.651 65.8 50.949C64.615 50.246 63.279 49.583 61.791 48.958C60.701 48.507 59.724 48.069 58.859 47.644C57.994 47.219 57.259 46.785 56.654 46.343C56.049 45.901 55.582 45.432 55.253 44.938C54.924 44.444 54.76 43.884 54.76 43.259C54.76 42.686 54.907 42.17 55.201 41.711C55.495 41.251 55.91 40.857 56.446 40.527C56.982 40.197 57.639 39.942 58.418 39.759C59.196 39.577 60.061 39.486 61.013 39.486C61.705 39.486 62.436 39.538 63.206 39.642C63.976 39.746 64.75 39.907 65.528 40.123C66.306 40.34 67.063 40.613 67.798 40.943C68.533 41.273 69.212 41.654 69.835 42.088V34.307C68.572 33.821 67.193 33.461 65.697 33.227C64.201 32.993 62.484 32.876 60.547 32.876C58.575 32.876 56.707 33.089 54.943 33.514C53.179 33.939 51.626 34.603 50.286 35.505C48.945 36.407 47.886 37.557 47.108 38.953C46.33 40.35 45.94 42.019 45.94 43.963C45.94 46.444 46.654 48.561 48.081 50.313C49.508 52.065 51.675 53.549 54.581 54.763C55.723 55.231 56.786 55.691 57.772 56.142C58.758 56.593 59.61 57.061 60.328 57.547C61.046 58.033 61.612 58.562 62.027 59.134C62.443 59.707 62.65 60.357 62.65 61.086C62.65 61.624 62.521 62.123 62.261 62.582C62.002 63.042 61.608 63.441 61.08 63.779C60.552 64.117 59.895 64.382 59.108 64.573C58.321 64.764 57.4 64.859 56.345 64.859C54.546 64.859 52.764 64.543 51 63.909C49.233 63.276 47.598 62.326 46.093 61.059ZM32.105 40.329H42.969V33.469H12.688V40.329H23.499V70.875H32.105V40.329Z" fill="white" />
-                </svg>
-                <h5 className={styles['skill-title']}>2024 - Present</h5>
-                <h4 className={styles['skill-title']}>Typescript Mastery</h4>
-                <p className={styles['skill-text']}>
-                    Exploring the world of Typescript, I have been working on a variety of projects using React and Node.js.
-                </p>
-            </div>
-            <div>
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                    className={styles.title}
-                >
-                    Recent Projects
-                </motion.h2>
-                <motion.svg
-                    height="4"
-                    viewBox="0 0 204 4"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={styles.line}
-                >
-                    <motion.path
-                        d="M2 2L202 1.99998"
-                        stroke="url(#paint0_linear_6_519)"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                        initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
-                        transition={{ delay: 1 }}
-                        className={styles['path-line']}
-                    />
-                    <defs>
-                        <linearGradient
-                            id="paint0_linear_6_519"
-                            x1="202.5"
-                            y1="2"
-                            x2="0.999995"
-                            y2="2"
-                            gradientUnits="userSpaceOnUse"
-                        >
-                            <stop stop-color="#a9e95d" />
-                            <stop offset="1" stop-color="#a9e95d" />
-                        </linearGradient>
-                    </defs>
-                </motion.svg>
             </div>
             <div className={styles['grid-items']}>
                 <motion.div className={styles['grid-item']}>
                     <img src={website1} className={styles['grid-img']} />
-                    <div className={styles['visit-portfolio']}>
-                        <h4>Python Chat Room App</h4>
-                        <a
-                            href="https://github.com/Git-haan/React-Trivia-Game"
-                            className={styles.anchor}
-                        >
-                            Learn More{' '}
-                        </a>
-                    </div>
+                    <div className={styles['visit-portfolio']}></div>
                 </motion.div>
 
                 <motion.div className={styles['grid-item']}>
                     <img src={website3} className={styles['grid-img']} />
-                    <div className={styles['visit-portfolio']}>
-                        <h4>React Trivia App</h4>
-                        <a
-                            href="https://github.com/Git-haan/Tkinter-Chat-App"
-                            className={styles.anchor}
-                        >
-                            Learn More{' '}
-                        </a>
-                    </div>
+                    <div className={styles['visit-portfolio']}></div>
                 </motion.div>
             </div>
-            <div />
+            <div>
+                <table className={styles.table}>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td className={styles['table-txt']}>
+                            A Trivia Game application, deployed utilizing React and Codux software.
+                            This application has been integrated with TypeScript, as well as SCSS
+                            and CSS, in order to allow for the dynamic rendering of questions and
+                            buttons.
+                        </td>
+                        <td>
+                            <motion.svg
+                                width="3"
+                                height="150"
+                                viewBox="0 0 6 150"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                className={styles.line}
+                            >
+                                <motion.path
+                                    d="M2 2L2 548"
+                                    stroke="url(#paint0_linear_6_519)"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                    initial={{ pathLength: 0 }}
+                                    animate={{ pathLength: 1 }}
+                                    transition={{ delay: 1 }}
+                                    className={styles['path-line']}
+                                />
+                                <defs>
+                                    <linearGradient
+                                        id="paint0_linear_6_519"
+                                        x1="0"
+                                        y1="0"
+                                        x2="0"
+                                        y2="550"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#ffffff" />
+                                        <stop offset="1" stop-color="#ffffff" />
+                                    </linearGradient>
+                                </defs>
+                            </motion.svg>
+                        </td>
+                        <td className={styles['table-txt']}>
+                            A chat application applied on local servers with the use of Python's
+                            tkinter, threading, and socket modules. The software enables numerous
+                            clients to link, allowing seamless communication without any latency.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className={styles['table-link']}>
+                            <a
+                                href="https://github.com/Git-haan/React-Trivia-Game"
+                                className={styles.anchor}
+                            >
+                                Learn More{' '}
+                            </a>
+                        </td>
+                        <td></td>
+                        <td className={styles['table-link']}>
+                            <a
+                                href="https://github.com/Git-haan/Tkinter-Chat-App"
+                                className={styles.anchor}
+                            >
+                                Learn More{' '}
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div className={styles.socials}>
                 <a href="https://www.linkedin.com/in/ishaan-r-05-/">
                     <svg
