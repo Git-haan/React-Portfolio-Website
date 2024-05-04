@@ -39,5 +39,5 @@ Boots up a local static web server that serves the files from dist at [`http://l
 ### Quiz
 ![quiz-window](Screenshots/quiz-window.png)
 
-### Contatc
+### Contact
 ![contact-form](Screenshots/contact-form.png)
